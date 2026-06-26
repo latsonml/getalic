@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alic — Get paid first. Never need an MCA again.</title>
+  <meta name="description" content="An all-in-one cash flow tool that helps you plan ahead, get paid by customers, and never need a high-interest merchant cash advance again.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=19">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body id="top">
+  <!-- Integration logo sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="logo-stripe" viewBox="0 0 120 50"><path fill="currentColor" d="M59.5 20.9c-5.3 0-9.3 2.5-9.3 7.2 0 4.7 4 7.2 9.3 7.2 5.4 0 9.4-2.5 9.4-7.2 0-4.7-4-7.2-9.4-7.2zm0 11.5c-2.8 0-4.8-1.3-4.8-4.3s2-4.3 4.8-4.3 4.8 1.3 4.8 4.3-2 4.3-4.8 4.3zM79.6 20.5c-2.9 0-5.1 1.4-6.2 3.6l-.3-3.2h-5.1V41h5.4V28.8c0-2.8 1.6-4.4 4.1-4.4 2.3 0 3.6 1.4 3.6 4.2V41h5.4V27.8c0-4.8-2.7-7.3-6.9-7.3zM97.8 14.6h-5.4V41h5.4V14.6zM20.5 14.6H8.8c-1.5 0-2.7 1.2-2.7 2.7v20.7c0 1.5 1.2 2.7 2.7 2.7h11.7c6.2 0 10.5-3.2 10.5-8.9 0-5.4-4-8.9-10.5-8.9zm-1.8 14.8H13V19.4h5.7c3.4 0 5.5 1.8 5.5 5 0 3.2-2.1 5-5.5 5z"/></symbol>
+    <symbol id="logo-shopify" viewBox="0 0 120 34"><path fill="currentColor" d="M35 10.2h4.2l6.8 14.5V10.2H50v17.4h-4.2L39 13.1v14.5H35V10.2zm22.5 0c4.8 0 7.8 3.2 7.8 8.7s-3 8.7-7.8 8.7-7.8-3.2-7.8-8.7 3-8.7 7.8-8.7zm0 3.6c-2.5 0-4 1.8-4 5.1s1.5 5.1 4 5.1 4-1.8 4-5.1-1.5-5.1-4-5.1zm18.2-3.6c2.8 0 4.8 1.2 5.8 3.2l-3.4 2c-.6-1-1.5-1.5-2.6-1.5-1.8 0-3 1.3-3 3.6s1.2 3.6 3 3.6c1.1 0 2-.5 2.6-1.5l3.4 2c-1 2-3 3.2-5.8 3.2-4.2 0-7-3-7-7.3s2.8-7.3 7-7.3z"/></symbol>
+    <symbol id="logo-quickbooks" viewBox="0 0 140 28"><path fill="currentColor" d="M38 8h4v12h-4V8zm8 3h3.8l4.2 8.5V8h3.5v12h-3.6l-4.4-8.8V20H46V8zm18 0h6.5c3.8 0 6.2 2.2 6.2 6s-2.4 6-6.2 6H58v3h-4V8zm6 3.2H62V15h4c1.8 0 2.8-1 2.8-2.8S67.8 11.2 66 11.2z"/></symbol>
+    <symbol id="logo-plaid" viewBox="0 0 100 32"><path fill="currentColor" d="M8 6h8v20H8V6zm12 0h8v20h-8V6zm12 0h8v20h-8V6zm12 0h8v20h-8V6zM20 14h8v8h-8v-8zm24 0h8v8h-8v-8z"/></symbol>
+    <symbol id="logo-square" viewBox="0 0 100 32"><rect x="4" y="4" width="24" height="24" rx="4" fill="currentColor"/><path fill="currentColor" d="M38 10h6v2h-6v-2zm0 4h10v2H38v-2zm0 4h8v2h-8v-2zm14-8h4v12h-4V10zm8 0h4v12h-4V10zm8 0h6v2h-6v-2zm0 4h8v2h-8v-2zm0 4h6v2h-6v-2z"/></symbol>
+    <symbol id="logo-paypal" viewBox="0 0 110 28"><path fill="currentColor" d="M28 6h4.5l-3 20H25l3-20zm12 0c4 0 6.5 2 6.5 5.5 0 3.8-3 5.5-7.5 5.5h-2l-.8 4H32l3.5-20h4.5zm-.5 3.5h-3l-.7 4h2.5c2 0 3-.8 3-2.2 0-1.2-.8-1.8-2.8-1.8z"/></symbol>
+    <symbol id="logo-xero" viewBox="0 0 90 28"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="3"/><path fill="currentColor" d="M34 8h4l8 9V8h4v14h-4l-8-9v9h-4V8zm22 0h4v11h7v3h-11V8z"/></symbol>
+    <symbol id="logo-gusto" viewBox="0 0 100 28"><path fill="currentColor" d="M36 8h10c3.5 0 5.5 1.8 5.5 4.5 0 2-1 3.5-2.8 4.2L53 22h-4.5l-3.5-4.8H40V22h-4V8zm10 3.2H40v3.5h5.5c1.2 0 2-.6 2-1.6s-.8-1.9-2-1.9z"/></symbol>
+  </svg>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="nav-progress" id="nav-progress" aria-hidden="true"></div>
+  <div class="rail l" aria-hidden="true"></div>
+  <div class="rail r" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Alic — home">
+      <span class="brand-mark">Alic<sup>®</sup></span>
+      <span class="brand-tag">For Business</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="#bleed">The daily bleed</a>
+      <a href="#how">How it works</a>
+      <a href="#verticals">Industries</a>
+      <a href="#calculator">The real cost</a>
+      <a href="#compare">Compare</a>
+      <a href="#stories">Stories</a>
+      <a href="#" class="nav-login">Log in</a>
+      <a href="#" class="nav-pill">Get started</a>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero panel" id="top">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow reveal-now">
+            <i></i>
+            Cash flow management · MCA reconciliation
+          </span>
+          <h1 id="headline">
+            <span class="sr-only">Fuck MCA Companies. Alic gets you paid.</span>
+            <span class="line" aria-hidden="true"><span>F<span class="censor-char" data-slot="0">!</span><span class="censor-char" data-slot="1">@</span>k MCA Companies</span></span>
+            <span class="line" aria-hidden="true"><span>Alic gets you <span class="hl">paid</span>.</span></span>
+          </h1>
+          <p class="hero-sub reveal-now">
+            An all-in-one cash flow tool that helps you plan ahead, get paid by customers, and never need a high-interest merchant cash advance again.
+          </p>
+          <div class="hero-actions reveal-now">
+            <a href="#" class="btn btn-primary">Get started</a>
+            <a href="#how" class="btn btn-ghost">How it works</a>
+          </div>
+          <div class="hero-proof reveal-now">
+            <div class="avatars" aria-hidden="true">
+              <img class="avatar-img" src="assets/owner-bakery.png" alt="" width="36" height="36">
+              <img class="avatar-img" src="assets/owner-mechanic.png" alt="" width="36" height="36">
+              <img class="avatar-img" src="assets/owner-restaurant.png" alt="" width="36" height="36">
+              <span class="avatar avatar-more">+</span>
+            </div>
+            <div class="proof-text">
+              <strong>4.9/5</strong> based on 100+ reviews
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <figure class="hero-photo hero-photo-main" id="hero-photo">
+            <img src="assets/owner-retail.png" alt="Retail business owner managing cash flow on her laptop" width="640" height="427" loading="eager">
+            <figcaption class="hero-photo-pill" aria-hidden="true">
+              <span class="mono">MCA-free in</span>
+              <strong>6 mo.</strong>
+            </figcaption>
+          </figure>
+          <div class="browser-frame" id="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-url mono">app.getalic.com / dashboard</span>
+            </div>
+          <div class="ui-card hero-card float-card" id="hero-card">
+            <div class="ui-card-head">
+              <span class="mono">Balance & Forecast</span>
+              <span class="badge badge-up">↑ 12%</span>
+            </div>
+            <div class="hero-debit-toast" id="hero-debit-toast" aria-live="polite">
+              <span class="mono">Daily debit</span>
+              <span class="hero-debit-amt">−$486</span>
+            </div>
+            <div class="ui-card-balance">
+              <span class="balance-label">Projected balance</span>
+              <span class="balance-value" id="hero-balance">$13,400</span>
+            </div>
+            <div class="mini-chart" aria-hidden="true">
+              <svg viewBox="0 0 280 60" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#49C5B6" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#49C5B6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="chart-area" d="M0,45 L40,38 L80,42 L120,28 L160,32 L200,18 L240,22 L280,8 L280,60 L0,60 Z" fill="url(#chartGrad)"/>
+                <path class="chart-line" d="M0,45 L40,38 L80,42 L120,28 L160,32 L200,18 L240,22 L280,8" fill="none" stroke="#49C5B6" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="ui-card-rows">
+              <div class="ui-row">
+                <span class="ui-dot stripe"></span>
+                <span>Stripe</span>
+                <span class="ui-amt positive">+$4,200</span>
+              </div>
+              <div class="ui-row">
+                <span class="ui-dot bank"></span>
+                <span>Bank Account</span>
+                <span class="ui-amt">$9,180</span>
+              </div>
+              <div class="ui-row">
+                <span class="ui-dot paypal"></span>
+                <span>PayPal</span>
+                <span class="ui-amt positive">+$1,020</span>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="hero-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust" aria-label="Integrations">
+      <p class="trust-label mono">Trusted by businesses on the tools you already use</p>
+      <div class="trust-track-wrap">
+        <div class="trust-track" id="trust-track">
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Stripe"><use href="#logo-stripe"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Shopify"><use href="#logo-shopify"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="QuickBooks"><use href="#logo-quickbooks"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Square"><use href="#logo-square"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Plaid"><use href="#logo-plaid"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="PayPal"><use href="#logo-paypal"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Xero"><use href="#logo-xero"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Gusto"><use href="#logo-gusto"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Stripe"><use href="#logo-stripe"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Shopify"><use href="#logo-shopify"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="QuickBooks"><use href="#logo-quickbooks"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Square"><use href="#logo-square"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Plaid"><use href="#logo-plaid"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="PayPal"><use href="#logo-paypal"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Xero"><use href="#logo-xero"/></svg></div>
+          <div class="trust-logo-item"><svg class="trust-logo-svg" aria-label="Gusto"><use href="#logo-gusto"/></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Bleed — pinned scroll narrative -->
+    <section id="bleed" class="bleed-scene">
+      <div class="bleed-phase-wrap bleed-phase-dark" id="bleed-phase-1">
+        <div class="bleed-sticky bleed-dark">
+          <div class="debit-card bleed-card" data-raw data-fx="28vw" data-fy="22vh" style="left:6%;top:14%">
+            <span class="debit-indicator"></span>
+            DAILY DEBIT 84781183<br>
+            <span class="debit-amt">−$486.00 · BEFORE 6AM</span>
+          </div>
+          <div class="debit-card bleed-card bleed-card-ghost" data-raw data-fx="-30vw" data-fy="18vh" style="right:7%;top:18%">
+            ► OBLIGATION 02<br>
+            <span class="debit-amt">RENEWED · STACKED</span>
+          </div>
+          <div class="debit-card bleed-card" data-raw data-fx="24vw" data-fy="-20vh" style="left:10%;bottom:16%">
+            DAILY DEBIT MG2832<br>
+            <span class="debit-amt">−$394.86 · EVERY DAY</span>
+          </div>
+          <div class="debit-card bleed-card bleed-card-ghost" data-raw data-fx="-26vw" data-fy="-18vh" style="right:9%;bottom:12%">
+            ► CASH ON HAND<br>
+            <span class="debit-amt">SHRINKING WEEKLY</span>
+          </div>
+          <div class="debit-card bleed-card hidden-mobile" data-raw data-fx="2vw" data-fy="30vh" style="left:40%;top:8%">
+            DAILY DEBIT JU2482<br>
+            <span class="debit-amt">−$360.00 · 2736 LEFT</span>
+          </div>
+
+          <h2 class="bleed-statement">
+            <span data-word>They</span>
+            <span data-word>don't</span>
+            <span data-word>lend</span>
+            <span data-word>you</span>
+            <span data-word>money.</span>
+            <span data-word class="word-accent">They</span>
+            <span data-word class="word-accent">buy</span>
+            <span data-word class="word-accent">your</span>
+            <span data-word class="word-accent">future</span>
+            <span data-word class="word-accent">at</span>
+            <span data-word class="word-accent">a</span>
+            <span data-word class="word-accent">discount.</span>
+          </h2>
+
+          <div class="bleed-hud">
+            <div class="bleed-hud-item">
+              <span class="mono">Cash on hand</span>
+              <span class="bleed-hud-val" id="scene-balance">$24,800</span>
+            </div>
+            <div class="bleed-hud-item bleed-hud-warn">
+              <span class="mono">Days until broke</span>
+              <span class="bleed-hud-val" id="scene-days">47</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bleed-phase-wrap" id="bleed-phase-2">
+        <div class="bleed-sticky bleed-light">
+          <div class="bleed-grid-bg bleed-grid-light" aria-hidden="true"></div>
+
+          <div class="bleed-exit">
+            <span class="mono bleed-exit-eyebrow">There's another way</span>
+            <h2 class="bleed-exit-title" data-p2-title>See the crunch coming. Get paid first. Win it back.</h2>
+            <p class="bleed-exit-sub">Alic maps your cash flow, forecasts the gaps, and recovers what MCA companies already stole — so you never sign another factor rate again.</p>
+          </div>
+
+          <div class="bleed-forecast-card" data-analysis>
+            <span class="mono">13-week forecast</span>
+            <svg class="bleed-forecast-svg" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true">
+              <line x1="0" y1="50" x2="400" y2="50" stroke="rgba(26,61,47,0.15)" stroke-dasharray="4 4"/>
+              <path data-draw="bleed-line" d="M0,35 L60,32 L120,38 L180,45 L240,52 L300,42 L360,28 L400,22" fill="none" stroke="#49C5B6" stroke-width="2.5"/>
+              <circle data-bleed-dot cx="360" cy="28" r="5" fill="#C1FF72"/>
+            </svg>
+            <div class="bleed-forecast-stat">
+              <span>Projected balance · Week 13</span>
+              <strong id="bleed-forecast-val">$31,200</strong>
+            </div>
+          </div>
+
+          <div class="bleed-recover-card" data-restructure>
+            <span class="mono">Reconciliation</span>
+            <p>Recoverable from your MCAs</p>
+            <div class="bleed-recover-amt">$12,350</div>
+            <span class="bleed-recover-badge">No upfront cost</span>
+          </div>
+
+          <div class="bleed-debits-fade">
+            <div class="debit-card bleed-card bleed-card-faded" style="left:4%;top:16%">−$486 / day</div>
+            <div class="debit-card bleed-card bleed-card-faded" style="right:6%;top:20%">−$394 / day</div>
+            <div class="debit-card bleed-card bleed-card-faded" style="left:7%;bottom:20%">−$360 / day</div>
+            <div class="debit-card bleed-card bleed-card-faded" style="right:10%;bottom:16%">−$520 / day</div>
+            <div class="debit-card bleed-card bleed-card-faded hidden-mobile" style="left:38%;top:10%">−$412 / day</div>
+            <div class="debit-card bleed-card bleed-card-faded hidden-mobile" style="right:34%;bottom:24%">−$298 / day</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how section panel" id="how">
+      <div class="sec-head reveal">
+        <span class="mono">How Alic works</span>
+        <h2>Connect. Forecast. Recover.</h2>
+      </div>
+      <div class="how-steps">
+        <article class="how-step reveal">
+          <div class="how-step-top">
+            <span class="how-num mono">01</span>
+            <div class="how-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+          </div>
+          <h3>Connect your accounts</h3>
+          <p>Link your bank, Stripe, QuickBooks, and payment processors in under 10 minutes. Read-only — we never move money without you.</p>
+          <div class="how-metric">
+            <span class="how-metric-val" data-count="10" data-suffix=" min">0</span>
+            <span class="how-metric-label mono">Average setup time</span>
+          </div>
+        </article>
+        <article class="how-step reveal">
+          <div class="how-step-top">
+            <span class="how-num mono">02</span>
+            <div class="how-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-10"/><path d="M21 7v4h-4"/></svg>
+            </div>
+          </div>
+          <h3>See what's coming</h3>
+          <p>13-week rolling forecast updated daily. Alerts when you're heading for a crunch — weeks before you'd panic-apply for an advance.</p>
+          <div class="how-metric">
+            <span class="how-metric-val">13</span>
+            <span class="how-metric-label mono">Week forecast horizon</span>
+          </div>
+        </article>
+        <article class="how-step reveal">
+          <div class="how-step-top">
+            <span class="how-num mono">03</span>
+            <div class="how-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+          </div>
+          <h3>Recover what they took</h3>
+          <p>Our reconciliation team audits MCA agreements, finds overcharges, and fights funders to get your money back. No upfront cost.</p>
+          <div class="how-metric">
+            <span class="how-metric-val" data-count="12350" data-prefix="$">$0</span>
+            <span class="how-metric-label mono">Avg. recovery per audit</span>
+          </div>
+        </article>
+      </div>
+      <div class="how-connector" aria-hidden="true"><div class="how-connector-fill" id="how-connector-fill"></div></div>
+    </section>
+
+    <!-- MCA Calculator -->
+    <section class="calculator panel panel-cream" id="calculator">
+      <div class="calc-inner">
+        <div class="sec-head calc-sec-head reveal">
+          <span class="mono">01 — The real cost</span>
+          <h2>One advance. Here's what it really costs.</h2>
+        </div>
+        <div class="calc-layout reveal">
+          <div class="calc-controls">
+            <div class="calc-input-card">
+              <label class="mono" for="advance-input">Contract amount</label>
+              <div class="calc-input-wrap">
+                <span class="calc-currency">$</span>
+                <input type="text" id="advance-input" value="100,000" inputmode="numeric" aria-label="Advance amount">
+              </div>
+              <input type="range" id="advance-slider" min="25000" max="500000" step="5000" value="100000" aria-label="Advance amount slider">
+            </div>
+            <div class="calc-term-card">
+              <div class="calc-term-head">
+                <label class="mono" for="term-slider">Repayment term</label>
+                <span class="calc-term-val" id="term-display">5 months</span>
+              </div>
+              <input type="range" id="term-slider" min="4" max="6" step="1" value="5" aria-label="Repayment term in months">
+              <p class="calc-term-note">Mon–Fri daily debits · ~21 business days per month</p>
+            </div>
+          </div>
+          <ul class="calc-assumptions mono reveal" aria-label="Calculation assumptions">
+            <li><span>Origination fee</span><strong>5%</strong></li>
+            <li><span>Factor rate</span><strong>1.40</strong></li>
+            <li><span>Net to you</span><strong id="val-net">$95,000</strong></li>
+            <li><span>Daily debit</span><strong id="val-daily">$0</strong></li>
+          </ul>
+          <div class="calc-results">
+          <div class="bar-group">
+            <div class="bar-item">
+              <div class="bar-meta">
+                <span class="mono">What you receive (after 5% fee)</span>
+                <span class="bar-val" id="val-receive">$95,000</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill receive" id="bar-receive"></div>
+              </div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta">
+                <span class="mono">Total repayment</span>
+                <span class="bar-val" id="val-repay">$140,000</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill repay" id="bar-repay"></div>
+              </div>
+            </div>
+          </div>
+          <div class="calc-results-mid">
+            <div class="apr-callout" id="apr-callout">
+              <span class="mono">Effective APR (daily debit schedule)</span>
+              <span class="apr-num"><span id="apr-value">—</span>%</span>
+              <p>Annualized from net proceeds, factor 1.40, and equal Mon–Fri debits over ~<span id="apr-days">105</span> business days.</p>
+            </div>
+            <div class="calc-stolen">
+              <div class="stolen-item">
+                <span class="mono">They take (daily)</span>
+                <span class="stolen-val stolen-bad" id="val-daily-stolen">$0</span>
+              </div>
+              <div class="stolen-item">
+                <span class="mono">They take (weekly)</span>
+                <span class="stolen-val stolen-bad" id="val-weekly-stolen">$0</span>
+              </div>
+              <div class="stolen-item stolen-item-wide">
+                <span class="mono">You keep with Alic (yearly est.)</span>
+                <span class="stolen-val stolen-good" id="val-yearly-kept">$0</span>
+              </div>
+            </div>
+          </div>
+          <div class="calc-feed" id="calc-feed" aria-label="Simulated daily debits">
+            <div class="calc-feed-head mono">Your bank feed this week</div>
+            <div class="calc-feed-rows" id="calc-feed-rows"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="value-prop" id="value-prop">
+      <p class="value-text reveal">
+        <span class="value-line">Get <span class="hl">paid</span>.</span>
+        <span class="value-line">Plan <span class="hl">ahead</span>.</span>
+        <span class="value-line"><span class="hl">Win back</span> what they took.</span>
+      </p>
+    </section>
+
+    <!-- Industries / Verticals -->
+    <section class="verticals section" id="verticals">
+      <div class="sec-head reveal">
+        <span class="mono">Built for your industry</span>
+        <h2>MCA hits everyone. Alic helps everyone escape.</h2>
+      </div>
+      <div class="verticals-scroll-wrap">
+        <div class="verticals-track" id="verticals-track">
+          <article class="vertical-card">
+            <span class="mono vertical-tag">Restaurants</span>
+            <h3>Stop daily debits from eating your margins</h3>
+            <p>Seasonal swings shouldn't mean stacking another advance. Forecast slow weeks and collect faster.</p>
+            <span class="vertical-stat">−$2,400/wk avg. saved</span>
+          </article>
+          <article class="vertical-card">
+            <span class="mono vertical-tag">Trades &amp; Construction</span>
+            <h3>Bridge the gap between jobs</h3>
+            <p>See when receivables land vs. when payroll hits. No more panic-borrowing between projects.</p>
+            <span class="vertical-stat">6-wk visibility</span>
+          </article>
+          <article class="vertical-card">
+            <span class="mono vertical-tag">E-commerce</span>
+            <h3>Sync every processor in one view</h3>
+            <p>Stripe, Shopify, PayPal — unified cash flow so you know exactly what's available.</p>
+            <span class="vertical-stat">3+ integrations</span>
+          </article>
+          <article class="vertical-card">
+            <span class="mono vertical-tag">Healthcare</span>
+            <h3>Survive reimbursement delays</h3>
+            <p>Insurance payouts lag. Alic shows the crunch before it forces you into a factor rate.</p>
+            <span class="vertical-stat">13-wk forecast</span>
+          </article>
+          <article class="vertical-card">
+            <span class="mono vertical-tag">Retail</span>
+            <h3>Inventory cycles without the trap</h3>
+            <p>Stock up for season without signing away next quarter's revenue to an MCA.</p>
+            <span class="vertical-stat">$12K+ avg. recovered</span>
+          </article>
+          <article class="vertical-card">
+            <span class="mono vertical-tag">Logistics</span>
+            <h3>Fuel costs won't break you</h3>
+            <p>Variable expenses meet predictable planning. Reconciliation recovers overcharges from stacked funders.</p>
+            <span class="vertical-stat">MCA-free in 6 mo.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+      <!-- Feature 1 -->
+      <article class="feature panel reveal">
+        <div class="feature-content">
+          <span class="mono feature-num">02 — Cash flow</span>
+          <h2>Get paid by your customers, not by a lender</h2>
+          <p>Stop chasing advances when revenue dips. Alic shows you exactly when money comes in, when it goes out, and how to bridge the gap — without signing away tomorrow's sales.</p>
+          <ul class="check-list">
+            <li>Unified view of every account and payment processor</li>
+            <li>Invoice tracking with real-time payment status</li>
+            <li>Automated reminders so customers pay on time</li>
+            <li>No daily debits. No factor rates. No fine print.</li>
+          </ul>
+          <a href="#" class="btn btn-dark">Get started now</a>
+          <div class="feature-metric reveal">
+            <span class="feature-metric-val" data-count="231900" data-prefix="$">$0</span>
+            <span class="feature-metric-label mono">Avg. collected per month</span>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="browser-frame browser-frame-sm">
+            <div class="browser-bar">
+              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+              <span class="browser-url mono">Invoices</span>
+            </div>
+          <div class="ui-card invoice-card">
+            <div class="ui-card-head">
+              <span class="mono">Invoice status</span>
+              <span class="badge badge-pending">In progress</span>
+            </div>
+            <div class="invoice-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="invoice-progress"></div>
+              </div>
+              <div class="progress-labels">
+                <span>Sent</span>
+                <span>Partial</span>
+                <span>Paid</span>
+              </div>
+            </div>
+            <div class="invoice-stat">
+              <span class="mono">Paid to date</span>
+              <span class="invoice-amt" data-count="231900" data-prefix="$">$0</span>
+            </div>
+            <div class="ui-card-rows">
+              <div class="ui-row"><span>Acme Corp</span><span class="ui-amt positive">$48,200</span></div>
+              <div class="ui-row"><span>Metro Supply Co</span><span class="ui-amt positive">$92,700</span></div>
+              <div class="ui-row"><span>Westside Retail</span><span class="ui-amt muted">$91,000 pending</span></div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Feature 2 -->
+      <article class="feature panel feature-reverse reveal">
+        <div class="feature-visual">
+          <div class="browser-frame browser-frame-sm">
+            <div class="browser-bar">
+              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+              <span class="browser-url mono">Forecast</span>
+            </div>
+          <div class="ui-card forecast-card">
+            <div class="ui-card-head">
+              <span class="mono">Projected Balance</span>
+              <span class="badge badge-warn">Crunch ahead</span>
+            </div>
+            <div class="forecast-chart" aria-hidden="true">
+              <svg viewBox="0 0 320 120" preserveAspectRatio="none">
+                <line x1="0" y1="60" x2="320" y2="60" stroke="rgba(26,61,47,0.2)" stroke-dasharray="4 4"/>
+                <text x="4" y="56" class="zero-label" fill="rgba(26,61,47,0.4)" font-size="8">$0</text>
+                <path class="forecast-line" d="M0,30 L50,28 L100,35 L150,42 L200,55 L250,72 L300,88 L320,95" fill="none" stroke="#49C5B6" stroke-width="2.5"/>
+                <circle class="crunch-dot" cx="250" cy="72" r="6" fill="#C4784A"/>
+                <text x="230" y="105" fill="#c4784a" font-size="9" font-family="IBM Plex Mono">Week 6 crunch</text>
+              </svg>
+            </div>
+            <div class="forecast-alert">
+              <span class="alert-icon">⚠</span>
+              <div>
+                <strong>Cash shortfall in 6 weeks</strong>
+                <p>Based on current burn and receivables. Act now to avoid an advance.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="feature-content">
+          <span class="mono feature-num">03 — Forecasting</span>
+          <h2>See the crunch coming — weeks before it hits</h2>
+          <p>MCAs prey on panic. Alic gives you a 13-week rolling forecast so you see shortfalls before they become emergencies — and time to fix them without borrowing.</p>
+          <ul class="check-list">
+            <li>13-week cash flow projection updated daily</li>
+            <li>Scenario planning for slow seasons and growth spurts</li>
+            <li>Alerts when balance drops below your threshold</li>
+            <li>Actionable recommendations, not just charts</li>
+          </ul>
+          <a href="#" class="btn btn-dark">See how it works</a>
+          <div class="feature-metric reveal">
+            <span class="feature-metric-val">6</span>
+            <span class="feature-metric-label mono">Weeks early warning avg.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Feature 3 -->
+      <article class="feature panel reveal">
+        <div class="feature-content">
+          <span class="mono feature-num">04 — Reconciliation</span>
+          <h2>Get back the money your MCA already took</h2>
+          <p>Many MCAs overcharge through hidden fees, double debits, and miscalculated payoffs. Our reconciliation team audits your agreements and recovers what you're owed.</p>
+          <ul class="check-list">
+            <li>Full audit of your MCA agreements and debits</li>
+            <li>Identification of overcharges and illegal practices</li>
+            <li>Direct recovery — we fight the funders for you</li>
+            <li>No upfront cost. We only win when you do.</li>
+          </ul>
+          <a href="#" class="btn btn-accent">Get your money back</a>
+          <div class="feature-metric reveal">
+            <span class="feature-metric-val" data-count="12350" data-prefix="$">$0</span>
+            <span class="feature-metric-label mono">Avg. recovery per audit</span>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="browser-frame browser-frame-sm">
+            <div class="browser-bar">
+              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+              <span class="browser-url mono">Reconciliation</span>
+            </div>
+          <div class="ui-card recon-card">
+            <div class="ui-card-head">
+              <span class="mono">Reconciliation Summary</span>
+            </div>
+            <div class="recon-rows">
+              <div class="recon-row"><span>Double debits detected</span><span class="recon-amt">$2,840</span></div>
+              <div class="recon-row"><span>Incorrect factor rate</span><span class="recon-amt">$4,120</span></div>
+              <div class="recon-row"><span>Unauthorized fees</span><span class="recon-amt">$1,890</span></div>
+              <div class="recon-row"><span>Early payoff penalty</span><span class="recon-amt">$3,500</span></div>
+            </div>
+            <div class="recon-total">
+              <span>Total recoverable</span>
+              <span class="recon-total-amt" data-count="12350" data-prefix="$">$0</span>
+            </div>
+            <button class="btn btn-recover">Recover $12,350</button>
+          </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Comparison -->
+    <section class="compare" id="compare">
+      <div class="sec-head reveal">
+        <span class="mono">05 — Side by side</span>
+        <h2>Alic vs. a merchant cash advance</h2>
+      </div>
+      <div class="compare-table reveal">
+        <div class="compare-row compare-header">
+          <span class="compare-feature">Feature</span>
+          <span class="compare-mca">MCA</span>
+          <span class="compare-alic">Alic</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-feature">Cost structure</span>
+          <span class="compare-mca"><span class="icon-x">✕</span> Factor rates up to 1.50 — effective APR 80–200%+</span>
+          <span class="compare-alic"><span class="icon-check">✓</span> Flat monthly subscription. No factor rates.</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-feature">Payment schedule</span>
+          <span class="compare-mca"><span class="icon-x">✕</span> Daily or weekly debits from your bank</span>
+          <span class="compare-alic"><span class="icon-check">✓</span> You control when customers pay you</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-feature">Cash flow impact</span>
+          <span class="compare-mca"><span class="icon-x">✕</span> Erodes margins week after week</span>
+          <span class="compare-alic"><span class="icon-check">✓</span> Improves visibility and planning</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-feature">Personal guarantee</span>
+          <span class="compare-mca"><span class="icon-x">✕</span> Required on most agreements</span>
+          <span class="compare-alic"><span class="icon-check">✓</span> No personal guarantee needed</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-feature">Credit impact</span>
+          <span class="compare-mca"><span class="icon-x">✕</span> UCC filings can tank your score</span>
+          <span class="compare-alic"><span class="icon-check">✓</span> No credit pull. No UCC filing.</span>
+        </div>
+        <div class="compare-row">
+          <span class="compare-feature">Exit strategy</span>
+          <span class="compare-mca"><span class="icon-x">✕</span> Stack another advance to survive</span>
+          <span class="compare-alic"><span class="icon-check">✓</span> Reconciliation recovers overcharges</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Never Do -->
+    <section class="never panel panel-navy" id="never">
+      <canvas id="never-contours" aria-hidden="true"></canvas>
+      <div class="never-inner">
+        <div class="sec-head reveal">
+          <span class="mono">06 — Our promise</span>
+          <h2>Six things we'll never do to you</h2>
+        </div>
+        <div class="never-grid">
+          <div class="never-card">
+          <div class="never-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>
+          </div>
+          <h3>No hidden fees</h3>
+          <p>What you see is what you pay. No origination, no maintenance, no surprises.</p>
+        </div>
+        <div class="never-card">
+          <div class="never-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <h3>No daily debits</h3>
+          <p>Your bank account is yours. We never pull money on a schedule you didn't choose.</p>
+          <div class="never-demo" aria-hidden="true">
+            <span class="never-debit never-debit-anim">−$486.00</span>
+            <span class="never-debit never-debit-anim" style="animation-delay:.4s">−$394.86</span>
+            <span class="never-debit never-debit-anim" style="animation-delay:.8s">−$360.00</span>
+          </div>
+        </div>
+        <div class="never-card">
+          <div class="never-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>No personal guarantees</h3>
+          <p>Your business is the customer. Your house is off the table.</p>
+        </div>
+        <div class="never-card">
+          <div class="never-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>No compound interest</h3>
+          <p>We're not a lender. There's no interest to compound because there's no loan.</p>
+        </div>
+        <div class="never-card">
+          <div class="never-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3>No credit score impact</h3>
+          <p>We don't report to bureaus. We don't file UCC liens. Your credit stays yours.</p>
+        </div>
+        <div class="never-card">
+          <div class="never-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          </div>
+          <h3>No fine print</h3>
+          <p>Plain English terms. Cancel anytime. No lock-in, no penalties, no gotchas.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Owners / Testimonials -->
+    <section class="stories section panel panel-cream" id="stories">
+      <div class="stories-inner">
+        <div class="sec-head reveal">
+          <span class="mono">07 — Owners</span>
+          <h2>People who got their mornings back</h2>
+        </div>
+
+        <div class="scene reveal">
+          <svg viewBox="0 0 1200 340" role="img" aria-label="Illustrated street of small businesses: a bakery, an HVAC contractor, and a med spa">
+            <g class="disc" aria-hidden="true">
+              <circle class="s-soft" cx="1010" cy="86" r="20"/>
+              <circle class="s-soft" cx="1010" cy="86" r="34"/>
+              <circle class="s-soft" cx="1010" cy="86" r="48"/>
+              <circle class="s-acc" cx="1010" cy="86" r="62" stroke-dasharray="3 10" stroke-width="1.5"/>
+            </g>
+            <line class="s-line" x1="40" y1="300" x2="1160" y2="300"/>
+            <g class="s-soft">
+              <line x1="70" y1="300" x2="64" y2="312"/><line x1="190" y1="300" x2="184" y2="312"/><line x1="310" y1="300" x2="304" y2="312"/>
+              <line x1="430" y1="300" x2="424" y2="312"/><line x1="550" y1="300" x2="544" y2="312"/><line x1="670" y1="300" x2="664" y2="312"/>
+              <line x1="790" y1="300" x2="784" y2="312"/><line x1="910" y1="300" x2="904" y2="312"/><line x1="1030" y1="300" x2="1024" y2="312"/>
+              <line x1="1130" y1="300" x2="1124" y2="312"/>
+            </g>
+            <g>
+              <rect class="s-line" x="90" y="120" width="300" height="180"/>
+              <rect class="s-line" x="84" y="104" width="312" height="16"/>
+              <path class="smoke" d="M150 100 C 146 88, 158 82, 152 70 C 148 60, 158 54, 154 44"/>
+              <rect class="s-line" x="142" y="94" width="18" height="10"/>
+              <rect class="s-fill" x="130" y="134" width="220" height="32" rx="4"/>
+              <text class="s-txt" x="240" y="155">RIVERSIDE BAKERY</text>
+              <path class="s-line" d="M100 176 L380 176 L368 200 L112 200 Z"/>
+              <g class="s-acc" stroke-width="1.8">
+                <line x1="128" y1="176" x2="125" y2="200"/><line x1="156" y1="176" x2="153" y2="200"/><line x1="184" y1="176" x2="182" y2="200"/>
+                <line x1="212" y1="176" x2="210" y2="200"/><line x1="240" y1="176" x2="240" y2="200"/><line x1="268" y1="176" x2="270" y2="200"/>
+                <line x1="296" y1="176" x2="298" y2="200"/><line x1="324" y1="176" x2="327" y2="200"/><line x1="352" y1="176" x2="355" y2="200"/>
+              </g>
+              <rect class="s-line" x="118" y="214" width="156" height="72"/>
+              <line class="s-soft" x1="118" y1="250" x2="274" y2="250"/>
+              <line class="s-line" x1="170" y1="286" x2="170" y2="250"/>
+              <rect class="s-line" x="190" y="262" width="56" height="14"/>
+              <rect class="s-line" x="200" y="248" width="36" height="14"/>
+              <circle class="s-acc" cx="218" cy="242" r="4"/>
+              <line class="s-line" x1="182" y1="286" x2="254" y2="286"/>
+              <rect class="s-line" x="300" y="212" width="66" height="88"/>
+              <circle class="s-line" cx="312" cy="258" r="2.5"/>
+              <rect class="s-fill" x="312" y="226" width="42" height="16" rx="3"/>
+              <text class="s-txt sm" x="333" y="237">OPEN</text>
+            </g>
+            <g>
+              <line class="s-line" x1="430" y1="300" x2="430" y2="168"/>
+              <circle class="s-line" cx="430" cy="160" r="8"/>
+              <path class="s-acc" d="M414 150 A 22 22 0 0 1 446 150" stroke-dasharray="2 6" stroke-width="1.5"/>
+            </g>
+            <g>
+              <rect class="s-line" x="460" y="140" width="300" height="160"/>
+              <rect class="s-line" x="648" y="110" width="74" height="30"/>
+              <circle class="s-line" cx="685" cy="125" r="11"/>
+              <g class="s-acc" stroke-width="1.8">
+                <line x1="685" y1="117" x2="685" y2="133"/><line x1="677" y1="125" x2="693" y2="125"/>
+              </g>
+              <line class="s-soft" x1="656" y1="116" x2="656" y2="134"/>
+              <rect class="s-fill" x="496" y="152" width="228" height="32" rx="4"/>
+              <text class="s-txt" x="610" y="173">SUMMIT HVAC CO.</text>
+              <rect class="s-line" x="482" y="206" width="186" height="94"/>
+              <g class="s-soft">
+                <line x1="482" y1="226" x2="668" y2="226"/><line x1="482" y1="246" x2="668" y2="246"/>
+                <line x1="482" y1="266" x2="668" y2="266"/><line x1="482" y1="286" x2="668" y2="286"/>
+              </g>
+              <rect class="s-line" x="566" y="274" width="18" height="6"/>
+              <rect class="s-line" x="692" y="216" width="52" height="84"/>
+              <circle class="s-line" cx="702" cy="260" r="2.5"/>
+              <path class="s-acc" d="M700 196 q9 -8 18 0 q9 8 18 0" stroke-width="1.5"/>
+            </g>
+            <g>
+              <line class="s-line" x1="790" y1="300" x2="790" y2="168"/>
+              <circle class="s-line" cx="790" cy="160" r="8"/>
+              <path class="s-acc" d="M774 150 A 22 22 0 0 1 806 150" stroke-dasharray="2 6" stroke-width="1.5"/>
+            </g>
+            <g>
+              <rect class="s-line" x="820" y="132" width="300" height="168"/>
+              <path class="s-line" d="M820 132 Q 970 96 1120 132"/>
+              <rect class="s-fill" x="870" y="146" width="200" height="30" rx="4"/>
+              <text class="s-txt" x="970" y="166">LUMEN MED SPA</text>
+              <path class="s-line" d="M848 300 L848 218 Q848 198 870 198 L874 198 Q896 198 896 218 L896 300"/>
+              <line class="s-soft" x1="848" y1="240" x2="896" y2="240"/>
+              <path class="s-line" d="M916 300 L916 218 Q916 198 938 198 L942 198 Q964 198 964 218 L964 300"/>
+              <line class="s-soft" x1="916" y1="240" x2="964" y2="240"/>
+              <path class="s-line" d="M996 300 L996 214 Q996 192 1022 192 L1028 192 Q1054 192 1054 214 L1054 300"/>
+              <circle class="s-line" cx="1006" cy="252" r="2.5"/>
+              <path class="s-line" d="M1076 300 L1080 278 L1104 278 L1108 300 Z"/>
+              <g class="s-acc" stroke-width="1.5">
+                <path d="M1092 278 C 1092 264, 1084 260, 1082 252"/>
+                <path d="M1092 278 C 1092 262, 1100 258, 1103 250"/>
+                <path d="M1092 278 C 1092 268, 1092 260, 1092 254"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="quotes">
+          <div class="quote quote--sand reveal">
+            <span class="q-mark" aria-hidden="true">&quot;</span>
+            <p>I was bleeding $2,400 a week to three different funders. Alic showed me I didn't need another advance — I needed to collect faster. Six months later, I'm MCA-free.</p>
+            <footer>
+              <div class="q-who">
+                <b>Maria Chen</b>
+                <span>Chen's Bakery · Portland, OR</span>
+              </div>
+              <span class="q-chip">MCA-free in 6 mo.</span>
+            </footer>
+          </div>
+          <div class="quote quote--mint reveal">
+            <span class="q-mark" aria-hidden="true">&quot;</span>
+            <p>The reconciliation team found $18,000 in double debits I never would have caught. That paid for a year of Alic and then some.</p>
+            <footer>
+              <div class="q-who">
+                <b>James Okonkwo</b>
+                <span>Okonkwo Auto · Atlanta, GA</span>
+              </div>
+              <span class="q-chip">+$18k recovered</span>
+            </footer>
+          </div>
+          <div class="quote quote--rust reveal">
+            <span class="q-mark" aria-hidden="true">&quot;</span>
+            <p>For the first time I can see six weeks out. I used to panic-apply for advances every slow season. Not anymore.</p>
+            <footer>
+              <div class="q-who">
+                <b>Marcus Lindqvist</b>
+                <span>Lindqvist Café · Minneapolis, MN</span>
+              </div>
+              <span class="q-chip">6 wk visibility</span>
+            </footer>
+          </div>
+        </div>
+        <p class="quotes-note reveal">Composite examples representative of completed plans; names and details changed for privacy.</p>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats panel panel-navy">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <div class="stat-num">
+            <span class="count" data-target="41723912" data-prefix="$">$0</span>
+          </div>
+          <div class="stat-label">Saved in interest</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">
+            <span class="count" data-target="12336" data-suffix="+">0</span>
+          </div>
+          <div class="stat-label">Businesses helped</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">
+            <span class="count" data-target="3" data-suffix="x">0</span>
+          </div>
+          <div class="stat-label">Faster growth</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta panel panel-navy" id="cta">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-content reveal">
+        <h2>Get paid first.<br>Never look back.</h2>
+        <p>Join thousands of business owners who stopped feeding the MCA machine and started building real cash flow.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-lg">Get started</a>
+          <a href="#" class="btn btn-outline btn-lg">Schedule a demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">Alic<sup>®</sup></span>
+        <p>Cash flow management for businesses that refuse to be prey.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <span class="mono">Product</span>
+          <a href="#">Cash flow</a>
+          <a href="#">Forecasting</a>
+          <a href="#">Reconciliation</a>
+          <a href="#">Integrations</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono">Company</span>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono">Resources</span>
+          <a href="#">Blog</a>
+          <a href="#">MCA guide</a>
+          <a href="#">Help center</a>
+          <a href="#">API docs</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono">Legal</span>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="mono">© 2026 Alic Capital Management</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="cta-orb" id="cta-orb" aria-label="Get started with Alic">
+    <span class="cta-orb-label">Get<br>started</span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=19"></script>
+</body>
+</html>

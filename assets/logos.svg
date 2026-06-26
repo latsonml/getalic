@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="logo-stripe" viewBox="0 0 120 50">
+    <path fill="currentColor" d="M59.5 20.9c-5.3 0-9.3 2.5-9.3 7.2 0 4.7 4 7.2 9.3 7.2 5.4 0 9.4-2.5 9.4-7.2 0-4.7-4-7.2-9.4-7.2zm0 11.5c-2.8 0-4.8-1.3-4.8-4.3s2-4.3 4.8-4.3 4.8 1.3 4.8 4.3-2 4.3-4.8 4.3zM79.6 20.5c-2.9 0-5.1 1.4-6.2 3.6l-.3-3.2h-5.1V41h5.4V28.8c0-2.8 1.6-4.4 4.1-4.4 2.3 0 3.6 1.4 3.6 4.2V41h5.4V27.8c0-4.8-2.7-7.3-6.9-7.3zM97.8 14.6h-5.4V41h5.4V14.6zM20.5 14.6H8.8c-1.5 0-2.7 1.2-2.7 2.7v20.7c0 1.5 1.2 2.7 2.7 2.7h11.7c6.2 0 10.5-3.2 10.5-8.9 0-5.4-4-8.9-10.5-8.9zm-1.8 14.8H13V19.4h5.7c3.4 0 5.5 1.8 5.5 5 0 3.2-2.1 5-5.5 5z"/>
+  </symbol>
+  <symbol id="logo-shopify" viewBox="0 0 120 34">
+    <path fill="currentColor" d="M18.4 1.2L14.2 2.1c-.2-.6-.5-1.2-.9-1.7C12.4-.4 10.8-.2 9.8.8 8.5 2.1 7.8 4 7.5 6.2 5.8 6.6 4.6 7 4.6 7l-.1.2L3.2 25.8l14.8 2.7 8.4-1.9C26.4 26.6 18.4 1.2 18.4 1.2zM15.6 4.8c-.1.8-.3 1.9-.5 3.1l-3.4.9c.3-2 .9-3.6 1.6-4.5.3-.3.7-.5 1-.5.1 0 .2 0 .3.1-.1.3-.2.6-.2.9zm-2.2-2.1c.6 0 1.1.5 1.4 1.4-.9.3-1.9.7-3 1.1.3-1.5.9-2.5 1.6-2.5zm1 15.5L6.8 16.8l.8-6.2 4.5-1.2.7-4.2 2.8-.7c.2 1.5.4 3.1.5 4.5l4.6-1.2-.9 6.8z"/>
+    <path fill="currentColor" d="M35 10.2h4.2l6.8 14.5V10.2H50v17.4h-4.2L39 13.1v14.5H35V10.2zm22.5 0c4.8 0 7.8 3.2 7.8 8.7s-3 8.7-7.8 8.7-7.8-3.2-7.8-8.7 3-8.7 7.8-8.7zm0 3.6c-2.5 0-4 1.8-4 5.1s1.5 5.1 4 5.1 4-1.8 4-5.1-1.5-5.1-4-5.1zm18.2-3.6c2.8 0 4.8 1.2 5.8 3.2l-3.4 2c-.6-1-1.5-1.5-2.6-1.5-1.8 0-3 1.3-3 3.6s1.2 3.6 3 3.6c1.1 0 2-.5 2.6-1.5l3.4 2c-1 2-3 3.2-5.8 3.2-4.2 0-7-3-7-7.3s2.8-7.3 7-7.3z"/>
+  </symbol>
+  <symbol id="logo-quickbooks" viewBox="0 0 140 28">
+    <circle cx="14" cy="14" r="12" fill="currentColor" opacity=".15"/>
+    <path fill="currentColor" d="M14 4a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2.5a7.5 7.5 0 0 1 5.3 12.8l-1.8-1.8A5 5 0 1 0 14 9v2.5l-3.5-3.5L14 4.5V7a7.5 7.5 0 0 1 0 0z"/>
+    <path fill="currentColor" d="M38 8h4v12h-4V8zm0-3h4v2h-4V5zm8 3h3.8l4.2 8.5V8h3.5v12h-3.6l-4.4-8.8V20H46V8zm18 0h6.5c3.8 0 6.2 2.2 6.2 6s-2.4 6-6.2 6H58v3h-4V8zm6 3.2H62V15h4c1.8 0 2.8-1 2.8-2.8S67.8 11.2 66 11.2z"/>
+  </symbol>
+  <symbol id="logo-plaid" viewBox="0 0 100 32">
+    <path fill="currentColor" d="M8 6h8v20H8V6zm12 0h8v20h-8V6zm12 0h8v20h-8V6zm12 0h8v20h-8V6zM20 14h8v8h-8v-8zm24 0h8v8h-8v-8z"/>
+  </symbol>
+  <symbol id="logo-square" viewBox="0 0 100 32">
+    <rect x="4" y="4" width="24" height="24" rx="4" fill="currentColor"/>
+    <path fill="currentColor" d="M38 10h6v2h-6v-2zm0 4h10v2H38v-2zm0 4h8v2h-8v-2zm14-8h4v12h-4V10zm8 0h4v12h-4V10zm8 0h6v2h-6v-2zm0 4h8v2h-8v-2zm0 4h6v2h-6v-2z"/>
+  </symbol>
+  <symbol id="logo-paypal" viewBox="0 0 110 28">
+    <path fill="currentColor" d="M14 6c4.5 0 7 2.5 7 6.5 0 4.5-3 7.5-8.5 7.5H8l-1.5 6H2l3.5-20H14zm-.5 3.5H9.5l-1 6h4c2.5 0 3.8-1.2 3.8-3.2 0-2-1.5-2.8-3.8-2.8z"/>
+    <path fill="currentColor" d="M28 6h4.5l-3 20H25l3-20zm12 0c4 0 6.5 2 6.5 5.5 0 3.8-3 5.5-7.5 5.5h-2l-.8 4H32l3.5-20h4.5zm-.5 3.5h-3l-.7 4h2.5c2 0 3-.8 3-2.2 0-1.2-.8-1.8-2.8-1.8z"/>
+    <path fill="currentColor" d="M58 6h7c5 0 8 2.8 8 7.2 0 4.8-3.5 7.8-9 7.8h-3l-1 5H55l3-20zm6 3.5h-2.5l-.8 5h2.2c2.8 0 4.2-1.2 4.2-3.5 0-2-1.2-1.5-3.1-1.5z"/>
+  </symbol>
+  <symbol id="logo-xero" viewBox="0 0 90 28">
+    <circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path fill="currentColor" d="M34 8h4l8 9V8h4v14h-4l-8-9v9h-4V8zm22 0h4v11h7v3h-11V8z"/>
+  </symbol>
+  <symbol id="logo-gusto" viewBox="0 0 100 28">
+    <circle cx="14" cy="14" r="10" fill="currentColor" opacity=".2"/>
+    <path fill="currentColor" d="M14 8a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    <path fill="currentColor" d="M36 8h10c3.5 0 5.5 1.8 5.5 4.5 0 2-1 3.5-2.8 4.2L53 22h-4.5l-3.5-4.8H40V22h-4V8zm10 3.2H40v3.5h5.5c1.2 0 2-.6 2-1.6s-.8-1.9-2-1.9z"/>
+  </symbol>
+</svg>

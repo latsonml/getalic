@@ -1,0 +1,12 @@
+name: getalic
+static_sites:
+  - name: web
+    github:
+      repo: latsonml/getalic
+      branch: main
+      deploy_on_push: true
+    environment_slug: html
+    source_dir: /
+    output_dir: /
+    index_document: index.html
+    catchall_document: index.html

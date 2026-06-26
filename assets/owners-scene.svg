@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Illustrated street of small businesses: a bakery, an HVAC contractor, and a med spa">
+  <g class="disc" aria-hidden="true">
+    <circle class="s-soft" cx="1010" cy="86" r="20"/>
+    <circle class="s-soft" cx="1010" cy="86" r="34"/>
+    <circle class="s-soft" cx="1010" cy="86" r="48"/>
+    <circle class="s-acc" cx="1010" cy="86" r="62" stroke-dasharray="3 10" stroke-width="1.5"/>
+  </g>
+  <line class="s-line" x1="40" y1="300" x2="1160" y2="300"/>
+  <g class="s-soft">
+    <line x1="70" y1="300" x2="64" y2="312"/><line x1="190" y1="300" x2="184" y2="312"/><line x1="310" y1="300" x2="304" y2="312"/>
+    <line x1="430" y1="300" x2="424" y2="312"/><line x1="550" y1="300" x2="544" y2="312"/><line x1="670" y1="300" x2="664" y2="312"/>
+    <line x1="790" y1="300" x2="784" y2="312"/><line x1="910" y1="300" x2="904" y2="312"/><line x1="1030" y1="300" x2="1024" y2="312"/>
+    <line x1="1130" y1="300" x2="1124" y2="312"/>
+  </g>
+  <g>
+    <rect class="s-line" x="90" y="120" width="300" height="180"/>
+    <rect class="s-line" x="84" y="104" width="312" height="16"/>
+    <path class="smoke" d="M150 100 C 146 88, 158 82, 152 70 C 148 60, 158 54, 154 44"/>
+    <rect class="s-line" x="142" y="94" width="18" height="10"/>
+    <rect class="s-fill" x="130" y="134" width="220" height="32" rx="4"/>
+    <text class="s-txt" x="240" y="155">RIVERSIDE BAKERY</text>
+    <path class="s-line" d="M100 176 L380 176 L368 200 L112 200 Z"/>
+    <g class="s-acc" stroke-width="1.8">
+      <line x1="128" y1="176" x2="125" y2="200"/><line x1="156" y1="176" x2="153" y2="200"/><line x1="184" y1="176" x2="182" y2="200"/>
+      <line x1="212" y1="176" x2="210" y2="200"/><line x1="240" y1="176" x2="240" y2="200"/><line x1="268" y1="176" x2="270" y2="200"/>
+      <line x1="296" y1="176" x2="298" y2="200"/><line x1="324" y1="176" x2="327" y2="200"/><line x1="352" y1="176" x2="355" y2="200"/>
+    </g>
+    <rect class="s-line" x="118" y="214" width="156" height="72"/>
+    <line class="s-soft" x1="118" y1="250" x2="274" y2="250"/>
+    <line class="s-line" x1="170" y1="286" x2="170" y2="250"/>
+    <rect class="s-line" x="190" y="262" width="56" height="14"/>
+    <rect class="s-line" x="200" y="248" width="36" height="14"/>
+    <circle class="s-acc" cx="218" cy="242" r="4"/>
+    <line class="s-line" x1="182" y1="286" x2="254" y2="286"/>
+    <rect class="s-line" x="300" y="212" width="66" height="88"/>
+    <circle class="s-line" cx="312" cy="258" r="2.5"/>
+    <rect class="s-fill" x="312" y="226" width="42" height="16" rx="3"/>
+    <text class="s-txt sm" x="333" y="237">OPEN</text>
+  </g>
+  <g>
+    <line class="s-line" x1="430" y1="300" x2="430" y2="168"/>
+    <circle class="s-line" cx="430" cy="160" r="8"/>
+    <path class="s-acc" d="M414 150 A 22 22 0 0 1 446 150" stroke-dasharray="2 6" stroke-width="1.5"/>
+  </g>
+  <g>
+    <rect class="s-line" x="460" y="140" width="300" height="160"/>
+    <rect class="s-line" x="648" y="110" width="74" height="30"/>
+    <circle class="s-line" cx="685" cy="125" r="11"/>
+    <g class="s-acc" stroke-width="1.8">
+      <line x1="685" y1="117" x2="685" y2="133"/><line x1="677" y1="125" x2="693" y2="125"/>
+    </g>
+    <line class="s-soft" x1="656" y1="116" x2="656" y2="134"/>
+    <rect class="s-fill" x="496" y="152" width="228" height="32" rx="4"/>
+    <text class="s-txt" x="610" y="173">SUMMIT HVAC CO.</text>
+    <rect class="s-line" x="482" y="206" width="186" height="94"/>
+    <g class="s-soft">
+      <line x1="482" y1="226" x2="668" y2="226"/><line x1="482" y1="246" x2="668" y2="246"/>
+      <line x1="482" y1="266" x2="668" y2="266"/><line x1="482" y1="286" x2="668" y2="286"/>
+    </g>
+    <rect class="s-line" x="566" y="274" width="18" height="6"/>
+    <rect class="s-line" x="692" y="216" width="52" height="84"/>
+    <circle class="s-line" cx="702" cy="260" r="2.5"/>
+    <path class="s-acc" d="M700 196 q9 -8 18 0 q9 8 18 0" stroke-width="1.5"/>
+  </g>
+  <g>
+    <line class="s-line" x1="790" y1="300" x2="790" y2="168"/>
+    <circle class="s-line" cx="790" cy="160" r="8"/>
+    <path class="s-acc" d="M774 150 A 22 22 0 0 1 806 150" stroke-dasharray="2 6" stroke-width="1.5"/>
+  </g>
+  <g>
+    <rect class="s-line" x="820" y="132" width="300" height="168"/>
+    <path class="s-line" d="M820 132 Q 970 96 1120 132"/>
+    <rect class="s-fill" x="870" y="146" width="200" height="30" rx="4"/>
+    <text class="s-txt" x="970" y="166">LUMEN MED SPA</text>
+    <path class="s-line" d="M848 300 L848 218 Q848 198 870 198 L874 198 Q896 198 896 218 L896 300"/>
+    <line class="s-soft" x1="848" y1="240" x2="896" y2="240"/>
+    <path class="s-line" d="M916 300 L916 218 Q916 198 938 198 L942 198 Q964 198 964 218 L964 300"/>
+    <line class="s-soft" x1="916" y1="240" x2="964" y2="240"/>
+    <path class="s-line" d="M996 300 L996 214 Q996 192 1022 192 L1028 192 Q1054 192 1054 214 L1054 300"/>
+    <circle class="s-line" cx="1006" cy="252" r="2.5"/>
+    <path class="s-line" d="M1076 300 L1080 278 L1104 278 L1108 300 Z"/>
+    <g class="s-acc" stroke-width="1.5">
+      <path d="M1092 278 C 1092 264, 1084 260, 1082 252"/>
+      <path d="M1092 278 C 1092 262, 1100 258, 1103 250"/>
+      <path d="M1092 278 C 1092 268, 1092 260, 1092 254"/>
+    </g>
+  </g>
+</svg>
