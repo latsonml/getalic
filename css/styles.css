@@ -274,13 +274,17 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
   .nav-toggle { display: flex; }
 
   .nav-backdrop {
-    display: block;
+    display: none;
     position: fixed;
     inset: var(--nav-h) 0 0 0;
     z-index: 99;
     background: rgba(26, 31, 26, 0.3);
     border: none;
     cursor: pointer;
+  }
+
+  .nav-backdrop:not([hidden]) {
+    display: block;
   }
 
   .nav-links {
@@ -475,7 +479,6 @@ section + .panel { margin-top: var(--inset); }
 
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; }
 }
 
 .hero-eyebrow {
@@ -1454,11 +1457,77 @@ section + .panel { margin-top: var(--inset); }
 .icon-check { background: rgba(73, 197, 182, 0.15); color: var(--teal); }
 
 @media (max-width: 768px) {
-  .compare-row { grid-template-columns: 1fr; gap: 8px; }
-  .compare-alic { margin: 0; padding: 12px 16px; border-radius: 8px; }
-  .compare-header .compare-alic { margin: 0; padding: 0; background: transparent; }
-  .compare-mca::before { content: "MCA: "; font-weight: 600; color: var(--ink); }
-  .compare-alic::before { content: "Alic: "; font-weight: 600; }
+  .compare-table {
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .compare-header { display: none; }
+
+  .compare-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    border: none;
+    background: var(--field);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
+  }
+
+  .compare-row:last-child { border-bottom: 1px solid var(--line-soft); }
+
+  .compare-feature {
+    padding: 14px 16px;
+    background: var(--cream);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .compare-mca,
+  .compare-alic {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 0;
+  }
+
+  .compare-mca {
+    background: var(--field);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .compare-alic {
+    background: rgba(73, 197, 182, 0.08);
+  }
+
+  .compare-row.is-lit .compare-alic {
+    background: rgba(73, 197, 182, 0.12);
+  }
+
+  .compare-mca::before,
+  .compare-alic::before {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .compare-mca::before { content: "MCA"; color: var(--ink-40); }
+  .compare-alic::before { content: "Alic"; color: var(--teal); }
 }
 
 /* ============================================================
@@ -2804,4 +2873,80 @@ section + .panel { margin-top: var(--inset); }
 
 .footer-brand .brand-mark {
   font-size: 28px;
+}
+
+/* ============================================================
+   Mobile-only — remove side tint, fix full-bleed panels
+   ============================================================ */
+@media (max-width: 768px) {
+  body { background: var(--field); }
+
+  .grain,
+  .hero-glow { display: none; }
+
+  .nav {
+    background: rgba(245, 247, 251, 0.98);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .nav.is-dark,
+  .nav.is-dark-bleed {
+    background: rgba(13, 20, 48, 0.98);
+  }
+
+  .panel {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  .panel + .panel,
+  .panel + section,
+  section + .panel {
+    margin-top: 8px;
+  }
+
+  .hero {
+    margin-top: var(--nav-h);
+  }
+
+  .features {
+    padding: 0;
+  }
+
+  .feature {
+    margin-bottom: 8px;
+    border-radius: 0;
+  }
+
+  .stats.panel,
+  .final-cta.panel {
+    border-radius: 0;
+  }
+
+  .compare-row.is-lit .compare-alic {
+    background: rgba(73, 197, 182, 0.12);
+  }
+
+  .hero-visual {
+    min-height: auto;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .hero-photo-main {
+    max-width: none;
+    width: 100%;
+  }
+
+  .hero-visual .browser-frame {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    max-width: none;
+    width: 100%;
+  }
 }
