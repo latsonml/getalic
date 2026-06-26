@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=23">
+  <link rel="stylesheet" href="css/styles.css?v=30">
   <link rel="icon" href="assets/favicon.png" type="image/png">
 </head>
 <body id="top">
@@ -338,15 +338,20 @@
                 <span class="calc-currency">$</span>
                 <input type="text" id="advance-input" value="100,000" inputmode="numeric" aria-label="Advance amount">
               </div>
-              <input type="range" id="advance-slider" min="25000" max="500000" step="5000" value="100000" aria-label="Advance amount slider">
+              <div class="calc-slider-row">
+                <input type="range" id="advance-slider" min="25000" max="500000" step="5000" value="100000" aria-label="Advance amount slider">
+              </div>
+              <span class="calc-card-foot" aria-hidden="true"></span>
             </div>
             <div class="calc-term-card">
-              <div class="calc-term-head">
-                <label class="mono" for="term-slider">Repayment term</label>
+              <label class="mono" for="term-slider">Repayment term</label>
+              <div class="calc-term-display">
                 <span class="calc-term-val" id="term-display">5 months</span>
               </div>
-              <input type="range" id="term-slider" min="4" max="6" step="1" value="5" aria-label="Repayment term in months">
-              <p class="calc-term-note">Mon–Fri daily debits · ~21 business days per month</p>
+              <div class="calc-slider-row">
+                <input type="range" id="term-slider" min="4" max="6" step="1" value="5" aria-label="Repayment term in months">
+              </div>
+              <p class="calc-term-note calc-card-foot">Mon–Fri daily debits · ~21 business days per month</p>
             </div>
           </div>
           <ul class="calc-assumptions mono reveal" aria-label="Calculation assumptions">
