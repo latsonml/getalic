@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCA Reconciliation — Recover overcharges | Alic</title>
+  <meta name="description" content="Alic compares your MCA contract terms to every debit pulled from your bank, finds overcharges, and automates recovery so you get your money back.">
+  <link rel="preconnect" href="https://us.i.posthog.com">
+  <link rel="preconnect" href="https://us-assets.i.posthog.com">
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="xi Si init Ni ji pr qi Ui $i capture calculateEventProperties Zi register register_once register_for_session unregister unregister_for_session Yi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Ki identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Qi Wi createPersonProfile setInternalOrTestUser Ji Fi tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing zi debug mr it getPageViewId captureTraceFeedback captureTraceMetric Ri".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_nsWoauY8PLGSAgC6mSinqaXLM77FgTNDV9VeMNrk6oVQ', {
+      api_host: 'https://us.i.posthog.com',
+      defaults: '2026-05-30',
+      person_profiles: 'identified_only',
+    });
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=30">
+  <link rel="stylesheet" href="/css/services.css?v=1">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+</head>
+<body id="top" class="page-service page-reconciliation">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="nav-progress" id="nav-progress" aria-hidden="true"></div>
+  <div class="rail l" aria-hidden="true"></div>
+  <div class="rail r" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="brand" aria-label="Alic — home">
+      <span class="brand-mark">Alic<sup>®</sup></span>
+      <span class="brand-tag">For Business</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/#bleed">The daily bleed</a>
+      <a href="/#how">How it works</a>
+      <a href="/#calculator">The real cost</a>
+      <a href="/services/reconciliation/" class="is-active" aria-current="page">Reconciliation</a>
+      <a href="/#stories">Stories</a>
+      <a href="#" class="nav-login">Log in</a>
+      <a href="#" class="nav-pill">Get started</a>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="service-hero panel" id="hero">
+      <div class="service-hero-inner">
+        <span class="mono">Services — Reconciliation</span>
+        <h1>Recover every dollar your MCA overcharged</h1>
+        <p class="service-hero-lead">We compare the total debits pulled from your bank against the factor rate and terms in your contract — then automate the audit and fight funders to get your money back.</p>
+        <div class="service-hero-actions">
+          <a href="#" class="btn btn-primary">Start your audit</a>
+          <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefit ticker -->
+    <div class="benefit-ticker-wrap" aria-hidden="true">
+      <div class="benefit-ticker">
+        <div class="benefit-ticker-set">
+          <span class="benefit-chip">Contract rate verification</span>
+          <span class="benefit-chip">Debit-to-contract matching</span>
+          <span class="benefit-chip">Automated recovery</span>
+          <span class="benefit-chip">No upfront cost</span>
+        </div>
+        <div class="benefit-ticker-set benefit-ticker-set--dup">
+          <span class="benefit-chip">Contract rate verification</span>
+          <span class="benefit-chip">Debit-to-contract matching</span>
+          <span class="benefit-chip">Automated recovery</span>
+          <span class="benefit-chip">No upfront cost</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Problem -->
+    <section class="service-problem panel panel-cream">
+      <div class="service-problem-inner reveal">
+        <p>When daily debits exceed what your contract allows, <strong>you lose margin every week</strong> — and most businesses never catch it until they've stacked another advance.</p>
+      </div>
+    </section>
+
+    <!-- Foundation -->
+    <section class="service-foundation panel">
+      <div class="service-foundation-inner">
+        <div class="service-foundation-copy reveal">
+          <span class="mono">The foundation of fair payoffs</span>
+          <h2>Every debit should match the contract</h2>
+          <p>Merchant cash advance reconciliation is the process of comparing what your funder <em>contracted</em> to charge — factor rate, fees, schedule — against what they <em>actually</em> pulled from your account.</p>
+          <ul class="check-list">
+            <li>Line-by-line debit matching against contract terms</li>
+            <li>Factor rate and fee verification</li>
+            <li>Identification of double debits and unauthorized pulls</li>
+            <li>Recoverable amount calculated automatically</li>
+          </ul>
+        </div>
+        <div class="service-foundation-visual reveal">
+          <div class="service-compare-row">
+            <div>
+              <div class="service-compare-label">Contract says</div>
+              <div class="service-compare-contract">Factor 1.35 · $950/day</div>
+            </div>
+            <div>
+              <div class="service-compare-label">Bank shows</div>
+              <div class="service-compare-actual">Factor 1.40 · $1,050/day</div>
+            </div>
+          </div>
+          <div class="service-compare-row">
+            <div>
+              <div class="service-compare-label">Contract says</div>
+              <div class="service-compare-contract">Mon–Fri debits only</div>
+            </div>
+            <div>
+              <div class="service-compare-label">Bank shows</div>
+              <div class="service-compare-actual">Weekend debits detected</div>
+            </div>
+          </div>
+          <div class="service-compare-row">
+            <div>
+              <div class="service-compare-label">Contract says</div>
+              <div class="service-compare-contract">5% origination (disclosed)</div>
+            </div>
+            <div>
+              <div class="service-compare-label">Bank shows</div>
+              <div class="service-compare-actual">Hidden admin fees</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="service-features panel panel-cream">
+      <div class="service-features-inner">
+        <div class="sec-head reveal">
+          <span class="mono">What you get</span>
+          <h2>Find overcharges. Recover them. Move on.</h2>
+        </div>
+        <div class="service-features-grid">
+          <article class="service-feature-card reveal">
+            <div class="service-feature-icon" aria-hidden="true">◎</div>
+            <h3>Match every debit</h3>
+            <p>We ingest your bank feed and MCA agreement, then compare every pull against the contracted factor rate, schedule, and fee structure.</p>
+          </article>
+          <article class="service-feature-card reveal">
+            <div class="service-feature-icon" aria-hidden="true">⚑</div>
+            <h3>Flag contract violations</h3>
+            <p>Double debits, incorrect factor rates, unauthorized fees, and miscalculated payoffs — surfaced automatically with dollar amounts attached.</p>
+          </article>
+          <article class="service-feature-card reveal">
+            <div class="service-feature-icon" aria-hidden="true">↻</div>
+            <h3>Automate recovery</h3>
+            <p>From audit to funder dispute, Alic handles the process so you don't spend hours on hold or hire a lawyer for every overcharge.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="service-steps panel" id="how-it-works">
+      <div class="service-steps-inner">
+        <div class="sec-head reveal">
+          <span class="mono">How it works</span>
+          <h2>From contract to refund in four steps</h2>
+        </div>
+        <div class="service-steps-grid">
+          <article class="service-step reveal">
+            <span class="service-step-num">1</span>
+            <h3>Connect accounts</h3>
+            <p>Link your bank and upload MCA agreements. Read-only access — we never move money without you.</p>
+          </article>
+          <article class="service-step reveal">
+            <span class="service-step-num">2</span>
+            <h3>Parse contract terms</h3>
+            <p>We extract factor rates, fee schedules, debit frequency, and payoff terms from your agreements.</p>
+          </article>
+          <article class="service-step reveal">
+            <span class="service-step-num">3</span>
+            <h3>Compare every debit</h3>
+            <p>Each transaction is matched against what your contract allows. Overcharges are flagged with recoverable amounts.</p>
+          </article>
+          <article class="service-step reveal">
+            <span class="service-step-num">4</span>
+            <h3>Recover overcharges</h3>
+            <p>Our team disputes with funders on your behalf. No upfront cost — we only win when you do.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two paths -->
+    <section class="service-paths panel panel-navy">
+      <div class="service-paths-inner">
+        <div class="sec-head reveal">
+          <span class="mono">Two paths. One goal.</span>
+          <h2>See the audit yourself — or let us handle recovery</h2>
+        </div>
+        <div class="service-paths-grid">
+          <article class="service-path-card service-path-card--light reveal">
+            <h3>Dashboard audit</h3>
+            <p>Connect your accounts and see a live reconciliation summary — every overcharge categorized with recoverable totals.</p>
+            <ul class="check-list">
+              <li>Real-time debit matching</li>
+              <li>Contract vs. actual breakdown</li>
+              <li>Exportable audit report</li>
+            </ul>
+            <a href="#" class="btn btn-ghost" style="margin-top:20px">View your audit</a>
+          </article>
+          <article class="service-path-card service-path-card--highlight reveal">
+            <h3>Full-service recovery</h3>
+            <p>Our reconciliation team takes your audit, disputes with funders, and fights to get every overcharged dollar back.</p>
+            <ul class="check-list">
+              <li>Direct funder disputes</li>
+              <li>Illegal practice identification</li>
+              <li>No upfront cost</li>
+            </ul>
+            <a href="#" class="btn btn-primary" style="margin-top:20px">Get your money back</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product UI -->
+    <section class="service-product panel">
+      <div class="service-product-inner">
+        <div class="service-product-copy reveal">
+          <span class="mono feature-num">Live reconciliation</span>
+          <h2>See exactly what they overcharged</h2>
+          <p>Your reconciliation dashboard breaks down every recoverable category — double debits, factor rate errors, hidden fees, and payoff penalties — with a running total you can act on.</p>
+          <ul class="check-list">
+            <li>Full audit of MCA agreements and debits</li>
+            <li>Identification of overcharges and illegal practices</li>
+            <li>Direct recovery — we fight the funders for you</li>
+          </ul>
+        </div>
+        <div class="feature-visual reveal">
+          <div class="browser-frame browser-frame-sm">
+            <div class="browser-bar">
+              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+              <span class="browser-url mono">Reconciliation</span>
+            </div>
+            <div class="ui-card recon-card">
+              <div class="ui-card-head">
+                <span class="mono">Reconciliation Summary</span>
+              </div>
+              <div class="recon-rows">
+                <div class="recon-row"><span>Double debits detected</span><span class="recon-amt">$2,840</span></div>
+                <div class="recon-row"><span>Incorrect factor rate</span><span class="recon-amt">$4,120</span></div>
+                <div class="recon-row"><span>Unauthorized fees</span><span class="recon-amt">$1,890</span></div>
+                <div class="recon-row"><span>Early payoff penalty</span><span class="recon-amt">$3,500</span></div>
+              </div>
+              <div class="recon-total">
+                <span>Total recoverable</span>
+                <span class="recon-total-amt" data-count="12350" data-prefix="$">$0</span>
+              </div>
+              <button type="button" class="btn btn-recover">Recover $12,350</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof -->
+    <section class="service-proof panel panel-cream">
+      <div class="service-proof-inner">
+        <div class="service-proof-stats reveal">
+          <div class="service-stat-card">
+            <span class="service-stat-val" data-count="12350" data-prefix="$">$0</span>
+            <span class="service-stat-label">Avg. recovery per audit</span>
+          </div>
+          <div class="service-stat-card">
+            <span class="service-stat-val" data-count="18000" data-prefix="$">$0</span>
+            <span class="service-stat-label">Largest single recovery</span>
+          </div>
+          <div class="service-stat-card">
+            <span class="service-stat-val">$0</span>
+            <span class="service-stat-label">Upfront cost to you</span>
+          </div>
+        </div>
+        <blockquote class="quote quote--mint reveal">
+          <span class="q-mark" aria-hidden="true">&quot;</span>
+          <p>The reconciliation team found $18,000 in double debits I never would have caught. That paid for a year of Alic and then some.</p>
+          <footer>
+            <div class="q-who">
+              <b>James Okonkwo</b>
+              <span>Okonkwo Auto · Atlanta, GA</span>
+            </div>
+            <span class="q-chip">+$18k recovered</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="service-industries panel">
+      <div class="service-industries-inner">
+        <div class="sec-head reveal">
+          <span class="mono">Who it's for</span>
+          <h2>Any business stuck in the MCA cycle</h2>
+        </div>
+        <div class="service-industries-grid">
+          <article class="service-industry-card reveal">
+            <span class="mono">Restaurants</span>
+            <h3>Daily debits on thin margins</h3>
+            <p>Seasonal revenue swings make it easy to miss overcharges. Reconciliation recovers what stacked funders took during slow weeks.</p>
+          </article>
+          <article class="service-industry-card reveal">
+            <span class="mono">Trades &amp; Construction</span>
+            <h3>Between-job cash gaps</h3>
+            <p>Bridge payroll without signing another factor rate — and recover overcharges from the advances you already have.</p>
+          </article>
+          <article class="service-industry-card reveal">
+            <span class="mono">Retail</span>
+            <h3>Inventory cycles &amp; stacked MCAs</h3>
+            <p>Multiple funders mean multiple contracts to audit. We match every debit across all agreements.</p>
+          </article>
+          <article class="service-industry-card reveal">
+            <span class="mono">Logistics</span>
+            <h3>Variable costs, fixed debits</h3>
+            <p>Fuel and maintenance swing weekly but MCA pulls don't. Find where funders exceeded contracted rates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta panel panel-navy" id="cta">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-content reveal">
+        <h2>Stop leaving money<br>on the table.</h2>
+        <p>Upload your MCA agreements and bank data. We'll show you what's recoverable — and fight to get it back.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-lg">Start your audit</a>
+          <a href="#" class="btn btn-outline btn-lg">Schedule a demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">Alic<sup>®</sup></span>
+        <p>Cash flow management for businesses that refuse to be prey.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <span class="mono">Product</span>
+          <a href="/#features">Cash flow</a>
+          <a href="/#features">Forecasting</a>
+          <a href="/services/reconciliation/">Reconciliation</a>
+          <a href="#">Integrations</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono">Company</span>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono">Resources</span>
+          <a href="#">Blog</a>
+          <a href="#">MCA guide</a>
+          <a href="#">Help center</a>
+          <a href="#">API docs</a>
+        </div>
+        <div class="footer-col">
+          <span class="mono">Legal</span>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="mono">© 2026 Alic Capital Management</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="cta-orb" id="cta-orb" aria-label="Get started with Alic">
+    <span class="cta-orb-label">Get<br>started</span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="/js/service.js?v=1"></script>
+</body>
+</html>

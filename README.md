@@ -10,6 +10,8 @@ python3 -m http.server 8080
 
 Open `http://localhost:8080`.
 
+Service pages live under `/services/<name>/`, e.g. `http://localhost:8080/services/reconciliation/`.
+
 ## Deploy on DigitalOcean App Platform
 
 1. Push this repo to GitHub (`main` branch).
@@ -24,10 +26,13 @@ You can also import `.do/app.yaml` when creating the app (update the `repo` fiel
 ## Structure
 
 ```
-index.html          Entry point
-css/styles.css      Styles
-js/main.js          GSAP animations + calculator
-assets/             Images, favicon, SVGs
+index.html                        Home landing page
+services/reconciliation/index.html  MCA reconciliation service page
+css/styles.css                    Shared styles
+css/services.css                  Service page layouts
+js/main.js                        Home animations + calculator
+js/service.js                     Service page animations
+assets/                           Images, favicon, SVGs
 ```
 
-External dependencies (CDN): Google Fonts, GSAP 3.12.7.
+External dependencies (CDN): Google Fonts, GSAP 3.12.7, PostHog.
