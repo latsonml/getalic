@@ -5,6 +5,42 @@
   gsap.registerPlugin(ScrollTrigger);
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const CENSOR_CHARS = '!@#$%^&*';
+
+  function initCensorChars() {
+    const slots = document.querySelectorAll('.censor-char');
+    if (!slots.length) return;
+
+    slots.forEach((slot, i) => {
+      let idx = i % CENSOR_CHARS.length;
+      slot.textContent = CENSOR_CHARS[idx];
+
+      if (prefersReducedMotion) return;
+
+      const cycle = () => {
+        idx = (idx + 1) % CENSOR_CHARS.length;
+        gsap.fromTo(
+          slot,
+          { y: -12, opacity: 0, rotateX: -90 },
+          {
+            y: 0,
+            opacity: 1,
+            rotateX: 0,
+            duration: 0.14,
+            ease: 'power2.out',
+            onStart: () => { slot.textContent = CENSOR_CHARS[idx]; }
+          }
+        );
+      };
+
+      gsap.delayedCall(0.6 + i * 0.35, function tick() {
+        cycle();
+        gsap.delayedCall(0.16 + Math.random() * 0.08, tick);
+      });
+    });
+  }
+
+  initCensorChars();
 
   function fmt(n) {
     return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
@@ -90,14 +126,25 @@
 
   /* ── Hero entrance ── */
   if (!prefersReducedMotion) {
-    gsap.from('.service-hero-inner > *', {
+    gsap.to('#service-headline .line > span', {
+      y: 0,
+      duration: 1.1,
+      stagger: 0.12,
+      ease: 'power3.out',
+      delay: 0.1
+    });
+    gsap.from('.service-hero-inner > :not(h1), .service-hero-visual', {
       autoAlpha: 0,
       y: 28,
       duration: 0.8,
       stagger: 0.1,
       ease: 'power3.out',
-      delay: 0.1
+      delay: 0.1,
+      immediateRender: false
     });
+  } else {
+    gsap.set('#service-headline .line > span', { y: 0 });
+    gsap.set('.service-hero-visual', { autoAlpha: 1 });
   }
 
   /* ── Scroll reveals ── */

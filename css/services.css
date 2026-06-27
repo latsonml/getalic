@@ -7,16 +7,7 @@
   padding-top: calc(var(--nav-h) + var(--inset));
 }
 
-/* ── Hero ── */
-.service-hero {
-  padding: clamp(48px, 8vh, 96px) var(--pad) clamp(32px, 5vh, 56px);
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.service-hero-inner {
-  max-width: 780px;
-}
+/* hero inner styles used inside service-hero-layout */
 
 .service-hero .mono {
   display: block;
@@ -27,7 +18,26 @@
 .service-hero h1 {
   font-size: clamp(36px, 5.5vw, 64px);
   margin-bottom: 24px;
-  max-width: 16ch;
+  max-width: 14ch;
+}
+
+.service-hero h1 .line {
+  display: block;
+  overflow: hidden;
+  perspective: 600px;
+}
+
+.service-hero h1 .line > span {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  transform: translateY(110%);
+}
+
+.service-hero h1 .hl {
+  display: inline;
+  color: var(--ink);
+  background: var(--teal);
 }
 
 .service-hero-lead {
@@ -372,9 +382,102 @@
   color: var(--ink-60);
 }
 
-.service-path-card--light {
+.page-service .panel-navy .service-path-card--light {
   background: var(--field);
   border-color: var(--line-soft);
+  color: var(--ink);
+}
+
+.page-service .panel-navy .service-path-card--light h3 {
+  color: var(--ink);
+}
+
+.page-service .panel-navy .service-path-card--light > p,
+.page-service .panel-navy .service-path-card--light .check-list li {
+  color: var(--ink-60);
+}
+
+.page-service .panel-navy .service-path-card--light .check-list li::before {
+  color: var(--forest-mid);
+}
+
+.page-service .panel-navy .service-path-card--highlight {
+  color: var(--bone);
+}
+
+.page-service .panel-navy .service-path-card--highlight h3 {
+  color: var(--bone);
+}
+
+.service-path-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.service-hero-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(48px, 8vh, 96px) var(--pad) clamp(32px, 5vh, 56px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .service-hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero-visual {
+    order: -1;
+  }
+}
+
+.service-hero-visual {
+  margin: 0;
+  min-width: 0;
+}
+
+.service-hero-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+  box-shadow: var(--shadow);
+}
+
+.service-industry-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.service-quote-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.service-proof .quote footer {
+  align-items: center;
+}
+
+.service-proof .q-who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .service-path-card--highlight {
@@ -521,15 +624,11 @@
   color: var(--teal);
 }
 
-.panel-navy .service-path-card--highlight h3 {
-  color: var(--bone);
-}
-
-.panel-navy .service-path-card--highlight .check-list li {
+.page-service .panel-navy .service-path-card--highlight .check-list li {
   color: var(--bone-60);
 }
 
-.panel-navy .service-path-card--highlight .check-list li::before {
+.page-service .panel-navy .service-path-card--highlight .check-list li::before {
   color: var(--teal);
 }
 
